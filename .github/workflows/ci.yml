@@ -17,9 +17,16 @@ jobs:
         with:
           python-version: "3.13"
 
+      - name: Install uv
+        run: curl -LsSf https://astral.sh/uv/install.sh | sh
+        shell: bash
+
+      - name: Add uv to PATH
+        run: echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+
       - name: Install dependencies with uv
         working-directory: FastAPI/when2meet
-        run: uv add
+        run: uv sync
 
       - name: Run Black
         working-directory: FastAPI/when2meet
@@ -46,9 +53,16 @@ jobs:
         with:
           python-version: "3.13"
 
+      - name: Install uv
+        run: curl -LsSf https://astral.sh/uv/install.sh | sh
+        shell: bash
+
+      - name: Add uv to PATH
+        run: echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+
       - name: Install dependencies with uv
         working-directory: FastAPI/when2meet
-        run: uv add
+        run: uv sync
 
       - name: Run tests with coverage
         working-directory: FastAPI/when2meet
