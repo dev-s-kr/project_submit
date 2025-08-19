@@ -1,7 +1,9 @@
-name: CI # ci
+name: CI
 
 on:
   push:
+    paths:
+      - "FastAPI/when2meet/**"
 
 jobs:
   static-analysis:
@@ -16,17 +18,21 @@ jobs:
           python-version: "3.13"
 
       - name: Install dependencies with uv
+        working-directory: FastAPI/when2meet
         run: uv add
 
       - name: Run Black
+        working-directory: FastAPI/when2meet
         run: uv run black . --check
 
       - name: Run Ruff
+        working-directory: FastAPI/when2meet
         run: |
           uv run ruff check --select I
           uv run ruff check
 
       - name: Run Mypy
+        working-directory: FastAPI/when2meet
         run: uv run mypy .
 
   test:
@@ -41,9 +47,11 @@ jobs:
           python-version: "3.13"
 
       - name: Install dependencies with uv
+        working-directory: FastAPI/when2meet
         run: uv add
 
       - name: Run tests with coverage
+        working-directory: FastAPI/when2meet
         run: |
           uv run coverage run -m pytest .
           uv run coverage report -m
