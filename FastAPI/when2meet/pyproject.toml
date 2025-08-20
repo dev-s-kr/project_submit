@@ -4,7 +4,10 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "orjson==3.10.12",
+    "sqids>=0.5.2",
+]
 
 [dependency-groups]
 dev = [

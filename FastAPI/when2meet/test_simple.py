@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta
 
 DELIVERY_DAYS = 2
-# test
+
 
 def _is_holiday(day: datetime) -> bool:
     return day.weekday() > 5
