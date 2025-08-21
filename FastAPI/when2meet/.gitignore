@@ -9,4 +9,5 @@ wheels/
 # Virtual environments
 .venv
 .idea/
+.dmypy.json
 __pycache__/

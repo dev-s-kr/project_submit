@@ -15,7 +15,7 @@ uv run ruff check --fix
 Write-Host "OK"
 
 Write-Host "Starting mypy"
-uv run mypy .
+uv run dmypy run -- .
 Write-Host "OK"
 
 Write-Host "Starting pytest with coverage"
