@@ -19,7 +19,7 @@ TORTOISE_ORM = {
                 "password": config.MYSQL_PASSWORD,
                 "database": config.MYSQL_DB,
                 "connect_timeout": config.MYSQL_CONNECT_TIMEOUT,
-                "max": config.CONNECTION_POOL_MAXSIZE,
+                "maxsize": config.CONNECTION_POOL_MAXSIZE,
             },
         },
     },
