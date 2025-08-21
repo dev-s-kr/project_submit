@@ -5,8 +5,13 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "aerich==0.8.1",
+    "cryptography==44.0.0",
     "orjson==3.10.12",
+    "pydantic-settings==2.7.1",
     "sqids>=0.5.2",
+    "tomlkit==0.13.2",
+    "tortoise-orm[asyncmy]==0.23.0",
 ]
 
 [dependency-groups]
